@@ -133,4 +133,41 @@ return [
 
     'log_channel' => env('MAIL_LOG_CHANNEL'),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Mailer Configurations
+    |--------------------------------------------------------------------------
+    |
+    | Here you may configure all of the mailers used by your application plus
+    | their respective settings. Several examples have been configured for
+    | you and you are free to add your own as your application requires.
+    |
+    | Laravel supports a variety of mail "transport" drivers to be used while
+    | sending an e-mail. You will specify which one you are using for your
+    | mailers below. You are free to add additional mailers as required.
+    |
+    | Supported: "smtp", "sendmail", "mailgun", "ses", "ses-v2",
+    |            "postmark", "log", "array", "failover"
+    |
+    */
+
+    'mailers' => [
+        'smtp' => [
+            'transport' => 'smtp',
+            'host' => env('MAIL_HOST', 'sandbox.smtp.mailtrap.io'), // Gunakan nilai dari MAIL_HOST di .env jika tersedia, jika tidak, gunakan nilai default.
+            'port' => env('MAIL_PORT', 2525), // Gunakan nilai dari MAIL_PORT di .env jika tersedia, jika tidak, gunakan nilai default.
+            'encryption' => env('MAIL_ENCRYPTION', 'tls'), // Gunakan nilai dari MAIL_ENCRYPTION di .env jika tersedia, jika tidak, gunakan nilai default.
+            'username' => env('MAIL_USERNAME', '538ecec988c432'), // Gunakan nilai dari MAIL_USERNAME di .env jika tersedia, jika tidak, gunakan nilai default.
+            'password' => env('MAIL_PASSWORD', 'aade50d7cc6fcd'), // Gunakan nilai dari MAIL_PASSWORD di .env jika tersedia, jika tidak, gunakan nilai default.
+            'timeout' => null,
+            'auth_mode' => null,
+        ],
+    ]
+
+    
 ];
+
+// Path: config\services.php
+
+
+
